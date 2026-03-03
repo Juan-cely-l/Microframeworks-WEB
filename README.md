@@ -242,7 +242,7 @@ The browser renders the static site served directly from `src/main/resources/web
 ![Static file serving](Assets/Static%20file%20serving.png)
 
 ### REST `/App/hello` with Query Parameter
-Confirms `GET /App/hello?name=Peter` is resolved by the lambda route and reads query values correctly.
+Confirms `GET /App/hello?name=EstebanCelyLopez` is resolved by the lambda route and reads query values correctly.
 
 ![REST hello endpoint](Assets/REST%20hello%20with%20query%20param.png)
 
