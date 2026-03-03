@@ -1,5 +1,6 @@
 package WebFramework;
 
+@FunctionalInterface
 public interface WebMethod {
-    public String execute();
+    String execute(Request request, Response response) throws Exception;
 }

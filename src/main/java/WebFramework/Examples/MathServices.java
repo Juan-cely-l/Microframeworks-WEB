@@ -3,16 +3,15 @@ package WebFramework.Examples;
 import WebFramework.HttpServer;
 
 import static WebFramework.HttpServer.get;
-
-
-import java.io.IOException;
-import java.net.URISyntaxException;
-
-
+import static WebFramework.HttpServer.setRoutePrefix;
+import static WebFramework.HttpServer.staticfiles;
 
 public class MathServices {
-    public static void main(String[] args) throws IOException, URISyntaxException {
-        get("/pi", ()->"Pi="+Math.PI);
+    public static void main(String[] args) throws Exception {
+        staticfiles("/webroot");
+        setRoutePrefix("/App");
+        get("/hello", (req, resp) -> "Hello " + req.getValues("name"));
+        get("/pi", (req, resp) -> String.valueOf(Math.PI));
         HttpServer.main(args);
     }
 }
